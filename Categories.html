@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Categories</title>
     <style>
       input[type="text"]{
         padding: 5px;
@@ -61,17 +61,17 @@
     <nav>
         <ul>
             <li>
-                <a href="#">Products</a>
+                <a href="./product.html">Products</a>
             </li>
             <li>
                 <a href="./Categories.html">Categories</a>
             </li>
             <li>
-                <a href="">Products</a>
+                <a href="./Vendors.html">Vendors</a>
             </li>
         </ul>
     </nav>
-  <h1 style="text-align: center;">ADD PRODUCT</h1>
+  <h1 style="text-align: center;">ADD CATEGORY</h1>
   <div class="container" style="display: flex; flex-direction: row; justify-content: space-around;">
     
     <div class="leftside">
@@ -83,58 +83,18 @@
           <textarea id="w3review" name="deescription" rows="4" cols="30" style="outline: none;">
    
             </textarea><br><br>
+
+            <input type="checkbox" id="size1" name="Size1" value="Have Size" >
+<label for="vehicle1"> Is Parent</label><br> <br />
         </form>
       </section>
       <section id="Media">
-        <label for="image">Add images</label>
+        <label for="image">Add Photo</label>
           <input type="file"
          id="image" name="avatar"
          accept="image/png, image/jpeg" placeholder="Image upload"><br><br>
       </section>
-      <section id="pricing">
-        <label for="price">Price:</label><br>
-          <input type="text" id="price" name="price" placeholder="Price"> <br><br>
-          <label for="original_price">Original Price</label><br>
-          <input type="text" id="original_price" name="original_price" placeholder="Original Price"><br><br>
-      </section>
-      <section id="inventory">
-        <label for="quantity">Quantity</label><br>
-          <input type="number" id="quantity" name="quantity" placeholder="Quantity"><br><br>
-      </section>
-  
-      <section id="color_and_weight">
-        <label for="color">Color</label><br>
-        <input type="text" id="color" name="color" placeholder="Color"><br><br>
-      </section>
-
-    </div>
-    <div class="rightside" style="margin-left: 20px;">
-      <section id="categoy">
-        <label for="sku">SKU:</label><br>
-          <input type="text" id="sku" name="sku" placeholder="SKU"> <br><br>
-
-        <label for="Categories">Category:</label><br>
-          <!-- <input type="text" id="Categories" name="category" placeholder="category"> -->
-           <select name="category" id="category">
-            <option value="kg">Men's fashion</option>
-            <option value="k">Women''s fashion</option>
-            <option value="k">Electronics</option>
-          </select><br><br>
-
-          <label for="Categories">SubCategory:</label><br>
-          <!-- <input type="text" id="Categories" name="category" placeholder="category"> -->
-           <select name="category" id="category">
-            <option value="kg">clothing</option>
-            <option value="k">shoes</option>
-            <option value="k">watches</option>
-          </select><br><br>
-          
-          <label for="vendor">Vendor:</label><br>
-          <input type="text" id="vendor" name="vendor" placeholder="Vendor"><br><br>
-          <!-- <input type="checkbox" id="size1" name="Size1" value="Have Size" >
-<label for="vehicle1"> Have different sizes</label><br>
-          <button style="padding: 8px" id="myBtn"  >Add  Size</button><br><br> -->
-      </section>
+      
 
       <!-- The Modal -->
 <div id="myModal" class="modal">
