@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      input[type="text"]{
+        padding: 5px;
+        border-radius: 3px;
+      }
+      input[type="text"]:focus {
+        outline: none
+      }
+      label {
+        font-weight: 600;
+      }
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+      </style>
+</head>
+<body>
+  <h1 style="text-align: center;">ADD PRODUCT</h1>
+  <div class="container" style="display: flex; flex-direction: row; justify-content: space-around;">
+    
+    <div class="leftside">
+      <section id="naming">
+        <form action="#">
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" placeholder="Name"><br><br>
+          <label for="description">description</label><br>
+          <textarea id="w3review" name="deescription" rows="4" cols="30" style="outline: none;">
+   
+            </textarea><br><br>
+        </form>
+      </section>
+      <section id="Media">
+        <label for="image">Add images</label>
+          <input type="file"
+         id="image" name="avatar"
+         accept="image/png, image/jpeg" placeholder="Image upload"><br><br>
+      </section>
+      <section id="pricing">
+        <label for="price">Price:</label><br>
+          <input type="text" id="price" name="price" placeholder="Price"> <br><br>
+          <label for="original_price">Original Price</label><br>
+          <input type="text" id="original_price" name="original_price" placeholder="Original Price"><br><br>
+      </section>
+      <section id="inventory">
+        <label for="quantity">Quantity</label><br>
+          <input type="number" id="quantity" name="quantity" placeholder="Quantity"><br><br>
+      </section>
+  
+      <section id="color_and_weight">
+        <label for="color">Color</label><br>
+        <input type="text" id="color" name="color" placeholder="Color"><br><br>
+      </section>
+
+    </div>
+    <div class="rightside" style="margin-left: 20px;">
+      <section id="categoy">
+        <label for="sku">SKU:</label><br>
+          <input type="text" id="sku" name="sku" placeholder="SKU"> <br><br>
+
+        <label for="Categories">Category:</label><br>
+          <!-- <input type="text" id="Categories" name="category" placeholder="category"> -->
+           <select name="category" id="category">
+            <option value="kg">Men's fashion</option>
+            <option value="k">Women''s fashion</option>
+            <option value="k">Electronics</option>
+          </select><br><br>
+
+          <label for="Categories">SubCategory:</label><br>
+          <!-- <input type="text" id="Categories" name="category" placeholder="category"> -->
+           <select name="category" id="category">
+            <option value="kg">clothing</option>
+            <option value="k">shoes</option>
+            <option value="k">watches</option>
+          </select><br><br>
+          
+          <label for="vendor">Vendor:</label><br>
+          <input type="text" id="vendor" name="vendor" placeholder="Vendor"><br><br>
+          <!-- <input type="checkbox" id="size1" name="Size1" value="Have Size" >
+<label for="vehicle1"> Have different sizes</label><br>
+          <button style="padding: 8px" id="myBtn"  >Add  Size</button><br><br> -->
+      </section>
+
+      <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <section id="size">
+      <label for="newsize">size:</label><br>
+        <input type="text" id="newsize" name="size" placeholder="Size"> <br><br>
+<!-- 
+      <label for="Price">Price:</label><br>
+        <input type="text" id="Price" name="Price" placeholder="Price"> <select name="currency" id="currency">
+          <option value="USD">USD</option>
+          <option value="FBU">FBU</option>
+        </select><br><br> -->
+
+        
+
+        <button style="padding: 8px" id="myBtn2" >Add  Size</button><br><br>
+    </section>
+  </div>
+
+</div>
+      <input type="submit" value="SAVE PRODUCT" style="padding: 6px 20px; border-radius:5px; cursor: pointer; background-color: #aaaaaa;">
+    </div>
+   
+  </div>
+    
+  <script>
+
+     let sizes = []
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var haveSizeCheckbox = document.getElementById("size1");
+    var saveSizeButton = document.getElementById("myBtn2");
+
+
+    haveSizeCheckbox.onclick = function() {
+      if(document.getElementById("myBtn1").disabled == true) {
+        !document.getElementById("myBtn1").disabled
+      }else {
+        !document.getElementById("myBtn1").disabled
+      }
+    }
+    
+
+    saveSizeButton.onclick = function() {
+     console.log( document.getElementById("newsize").value)
+     sizes.push(document.getElementById("newsize").value)
+     var p = document.createElement('p');
+        p.textContent = "New Heading!!!";
+        p.setAttribute('class', 'note');
+        document.body.appendChild(h1);
+        // document.getElementById("size1").
+    }
+
+    // function create() {
+    //     var h1 = document.createElement('h1');
+    //     h1.textContent = "New Heading!!!";
+    //     h1.setAttribute('class', 'note');
+    //     document.body.appendChild(h1);
+    //   }
+
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+</body>
+</html>
